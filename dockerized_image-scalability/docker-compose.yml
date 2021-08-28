@@ -1,0 +1,21 @@
+version: "3"
+services:
+  nginx_load_balancer:
+    image: nginx
+    volumes:
+      - "./nginx/default.conf:/etc/nginx/nginx.conf"
+    ports:
+      - "8080:80"
+
+  app1:
+    image: my-node-app
+    environment:
+      - PORT=3000
+  app2:
+    image: my-node-app
+    environment:
+      - PORT=3001
+  app3:
+    image: my-node-app
+    environment:
+      - PORT=3002

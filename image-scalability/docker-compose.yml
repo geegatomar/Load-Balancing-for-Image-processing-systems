@@ -1,0 +1,15 @@
+version: "3"
+services:
+  flam-server:
+    image: my-node-app
+    restart: unless-stopped
+    ports:
+      - "8080"
+    deploy:
+      replicas: 4
+      restart_policy:
+        max_attempts: 3
+        condition: on-failure
+      update_config:
+        parallelism: 3
+        delay: 10s

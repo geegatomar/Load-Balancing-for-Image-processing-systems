@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <h1>Flam Backend Assignment</h1>
+    <h3>Upload image and specify the desired quality</h3>
+    <h5> Server on port <%= port %> </h5>
+    <form action="/" method="POST" enctype="multipart/form-data">
+      <label for="image">Upload image</label><br />
+      <input type="file" id="image" name="image" accept="image/*" /><br /><br />
+      <label for="quality">Specify Quality:</label><br />
+      <input
+        type="text"
+        id="quality"
+        name="quality"
+        placeholder="Enter number between 0 to 100"
+      /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script src="" async defer></script>
+  </body>
+</html>
